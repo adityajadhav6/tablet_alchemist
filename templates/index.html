@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tablet Alchemist</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center">Tablet Alchemist</h1>
+    <h3 class="text-center">Find the Right Medicine for Your Condition</h3>
+
+    <!-- Search Form -->
+    <form action="{{ url_for('recommend') }}" method="get" class="input-group mt-3">
+      <input type="text" id="condition-input" name="condition" class="form-control" placeholder="Enter a health condition..." list="condition-list" required>
+      <button type="submit" class="btn btn-primary">Get Recommendations</button>
+    </form>
+    
+    <!-- Autocomplete Suggestions -->
+    <datalist id="condition-list"></datalist>
+
+    <!-- Clinic Locator -->
+    <h3 class="mt-4 text-center">Find Nearby Clinics</h3>
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-success m-2" onclick="getUserLocation()">📍 Find Clinics Near Me</button>
+      <input type="text" id="manual-location" class="form-control m-2" placeholder="Enter location manually...">
+      <button class="btn btn-info m-2" onclick="searchManualLocation()">🔍 Search Location</button>
+    </div>
+
+    <!-- Map -->
+    <div id="map" style="height: 400px; margin-top: 20px;"></div>
+
+  </div>
+
+  <script>
+    let map = L.map('map').setView([20, 78], 5);  // Default view (India)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    function getUserLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+          let lat = position.coords.latitude;
+          let lon = position.coords.longitude;
+          map.setView([lat, lon], 14);
+          L.marker([lat, lon]).addTo(map).bindPopup("You are here").openPopup();
+          fetchClinics(lat, lon);
+        }, error => {
+          alert("Location access denied. Enter manually.");
+          console.log("Geolocation error:", error);
+        });
+      } else {
+        alert("Geolocation is not supported by your browser.");
+      }
+    }
+
+    function searchManualLocation() {
+      let location = document.getElementById("manual-location").value.trim();
+      if (!location) {
+        alert("Please enter a location!");
+        return;
+      }
+      fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(location)}`)
+        .then(response => response.json())
+        .then(data => {
+          if (data.length > 0) {
+            let lat = parseFloat(data[0].lat);
+            let lon = parseFloat(data[0].lon);
+            map.setView([lat, lon], 14);
+            L.marker([lat, lon]).addTo(map).bindPopup(`Location: ${location}`).openPopup();
+            fetchClinics(lat, lon);
+          } else {
+            alert("Location not found.");
+          }
+        })
+        .catch(error => {
+          alert("Error fetching location data.");
+          console.log("Location search error:", error);
+        });
+    }
+
+    function fetchClinics(lat, lon) {
+      let bbox = `${lon-0.1},${lat-0.1},${lon+0.1},${lat+0.1}`;
+      let url = `https://nominatim.openstreetmap.org/search?format=json&q=clinic&bounded=1&viewbox=${bbox}`;
+      
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          if (data.length === 0) {
+            alert("No clinics found nearby.");
+            return;
+          }
+          data.forEach(clinic => {
+            let clinicLat = parseFloat(clinic.lat);
+            let clinicLon = parseFloat(clinic.lon);
+            L.marker([clinicLat, clinicLon]).addTo(map)
+              .bindPopup(`<strong>${clinic.display_name}</strong>`);
+          });
+        })
+        .catch(error => {
+          alert("Error fetching clinic data.");
+          console.log("Clinic search error:", error);
+        });
+    }
+  </script>
+</body>
+</html>

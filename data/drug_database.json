@@ -1,0 +1,172 @@
+{
+  "headache": [
+    {
+      "name": "Ibuprofen",
+      "dosage": "200-400 mg every 4-6 hours",
+      "active_ingredients": "Ibuprofen",
+      "side_effects": "Nausea, dizziness, stomach pain",
+      "allergy_warning": "Avoid if allergic to NSAIDs or aspirin.",
+      "image": "images/ibuprofen.png"
+    },
+    {
+      "name": "Acetaminophen",
+      "dosage": "500-1000 mg every 4-6 hours",
+      "active_ingredients": "Acetaminophen",
+      "side_effects": "Liver damage (at high doses)",
+      "allergy_warning": "Rare, but avoid if sensitive to acetaminophen.",
+      "image": "images/acetaminophen.png"
+    },
+    {
+      "name": "Saridon",
+      "dosage": "One tablet as needed",
+      "active_ingredients": "Paracetamol, Propyphenazone, Caffeine",
+      "side_effects": "Nausea, dizziness, upset stomach",
+      "allergy_warning": "Avoid if allergic to NSAIDs or caffeine.",
+      "image": "images/saridon.png"
+    }
+  ],
+  "cough": [
+    {
+      "name": "Dextromethorphan",
+      "dosage": "10-20 mg every 4 hours",
+      "active_ingredients": "Dextromethorphan",
+      "side_effects": "Drowsiness, dizziness",
+      "allergy_warning": "Rare, but avoid if allergic to dextromethorphan.",
+      "image": "images/dextromethorphan.png"
+    },
+    {
+      "name": "Chestonsyrup",
+      "dosage": "10 ml every 6 hours",
+      "active_ingredients": "Ambroxol, Guaifenesin",
+      "side_effects": "Nausea, gastrointestinal discomfort",
+      "allergy_warning": "Avoid if allergic to Ambroxol or Guaifenesin.",
+      "image": "images/cheston.png"
+    },
+    {
+      "name": "Benadryl",
+      "dosage": "10 ml every 6 hours",
+      "active_ingredients": "Diphenhydramine, Ammonium chloride",
+      "side_effects": "Drowsiness, dry mouth",
+      "allergy_warning": "Avoid if allergic to antihistamines.",
+      "image": "images/benadryl.png"
+    },
+    {
+      "name": "Ascoril",
+      "dosage": "10 ml every 6 hours",
+      "active_ingredients": "Bromhexine, Guaifenesin, Menthol",
+      "side_effects": "Dizziness, nausea",
+      "allergy_warning": "Avoid if allergic to Guaifenesin or menthol.",
+      "image": "images/ascoril.png"
+    },
+    {
+      "name": "Corex",
+      "dosage": "10 ml every 8 hours",
+      "active_ingredients": "Codeine, Chlorpheniramine",
+      "side_effects": "Drowsiness, dry mouth, constipation",
+      "allergy_warning": "Avoid if allergic to Codeine or antihistamines.",
+      "image": "images/corex.png"
+    },
+    {
+      "name": "Torex",
+      "dosage": "10 ml every 6 hours",
+      "active_ingredients": "Dextromethorphan, Chlorpheniramine",
+      "side_effects": "Drowsiness, dizziness",
+      "allergy_warning": "Avoid if allergic to Dextromethorphan.",
+      "image": "images/torex.png"
+    }
+  ],
+  "pain": [
+    {
+      "name": "Movexx MR",
+      "dosage": "100 mg every 12 hours",
+      "active_ingredients": "Aceclofenac, Chlorzoxazone",
+      "side_effects": "Drowsiness, stomach upset, heartburn, nausea, diarrhea, headache",
+      "allergy_warning": "Avoid if allergic to NSAIDs or muscle relaxants.",
+      "image": "images/movexx_mr.png"
+    },
+    {
+      "name": "Nise",
+      "dosage": "100 mg twice daily",
+      "active_ingredients": "Nimesulide",
+      "side_effects": "Liver toxicity, stomach pain",
+      "allergy_warning": "Avoid if allergic to NSAIDs.",
+      "image": "images/nise.png"
+    }
+  ],
+  "fever": [
+    {
+      "name": "Dolo 650",
+      "dosage": "500-1000 mg every 4-6 hours",
+      "active_ingredients": "Paracetamol",
+      "side_effects": "Headache, constipation, nausea",
+      "allergy_warning": "Avoid if allergic to Paracetamol.",
+      "image": "images/dolo 650.png"
+    },
+    {
+      "name": "Ibuprofen",
+      "dosage": "200-400 mg every 4-6 hours",
+      "active_ingredients": "Ibuprofen",
+      "side_effects": "Nausea, dizziness, stomach pain",
+      "allergy_warning": "Avoid if allergic to NSAIDs or aspirin.",
+      "image": "images/ibuprofen.png"
+    },
+    {
+      "name": "Nimesulide",
+      "dosage": "100 mg twice daily",
+      "active_ingredients": "Nimesulide",
+      "side_effects": "Liver toxicity, nausea, stomach pain",
+      "allergy_warning": "Avoid if allergic to NSAIDs or if liver issues are present.",
+      "image": "images/nimesulide.png"
+    },
+    {
+      "name": "Calpol 500",
+      "dosage": "500 mg every 4-6 hours",
+      "active_ingredients": "Paracetamol",
+      "side_effects": "Rare allergic reactions, liver toxicity at high doses",
+      "allergy_warning": "Avoid if allergic to Paracetamol.",
+      "image": "images/calpol_500.png"
+    }
+  ],
+  "cold": [
+    {
+      "name": "Pulmoxyl-500",
+      "dosage": "500 mg once daily",
+      "active_ingredients": "Amoxicillin, Clavulanate",
+      "side_effects": "Nausea, diarrhea",
+      "allergy_warning": "Avoid if allergic to penicillin or cephalosporins.",
+      "image": "static/images/pulmoxy-500"
+    },
+    {
+      "name": "Dolocold",
+      "dosage": "One tablet every 4-6 hours",
+      "active_ingredients": "Paracetamol, Phenylephrine, Chlorpheniramine",
+      "side_effects": "Drowsiness, dry mouth",
+      "allergy_warning": "Avoid if allergic to antihistamines or Paracetamol.",
+      "image": "static/images/dolocold.png"
+    },
+    {
+      "name": "Cheston Cold",
+      "dosage": "One tablet every 4-6 hours",
+      "active_ingredients": "Cetirizine, Phenylephrine",
+      "side_effects": "Drowsiness, headache",
+      "allergy_warning": "Avoid if allergic to Cetirizine or decongestants.",
+      "image": "images/cheston_cold.png"
+    },
+    {
+      "name": "Sinarest",
+      "dosage": "One tablet every 6 hours",
+      "active_ingredients": "Paracetamol, Phenylephrine, Chlorpheniramine",
+      "side_effects": "Drowsiness, dizziness, dry mouth",
+      "allergy_warning": "Avoid if allergic to antihistamines.",
+      "image": "images/sinarest.png"
+    },
+    {
+      "name": "D-Cold Total",
+      "dosage": "One tablet every 6 hours",
+      "active_ingredients": "Paracetamol, Phenylephrine, Caffeine",
+      "side_effects": "Drowsiness, upset stomach",
+      "allergy_warning": "Avoid if allergic to Paracetamol or caffeine.",
+      "image": "images/dcold_total.png"
+    }
+  ]
+}
