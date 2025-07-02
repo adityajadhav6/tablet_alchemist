@@ -1,6 +1,3 @@
-Here’s the **complete and professional `README.md`** content for your tablet recommendation project, formatted cleanly for a GitHub repository:
-
----
 
 # 💊 Tablet Alchemist
 
@@ -30,7 +27,9 @@ A Flask-based web application that recommends tablets based on user-input health
 └── tests/  
     └── test_alchemist.py     # Test cases for core logic  
 ```
-
+---
+Live Demo: https://tablet-alchemist-adityajadhav6-adityajadhav6s-projects.vercel.app
+---
 ---
 
 ## 🚀 Installation
