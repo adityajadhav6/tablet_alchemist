@@ -92,15 +92,6 @@ The application uses `drug_database.json` for medicine details. Each entry conta
 
 ---
 
-## 🌟 Future Enhancements
-
-* 🔐 Add user authentication for personalized suggestions
-* 🗺️ Integrate geolocation to suggest nearby pharmacies
-* ❤️ Add favorite/save feature for tablets
-* 🧠 Enrich the database with dosage, side effects, etc.
-
----
-
 ## 🤝 Contributing
 
 Contributions are welcome!
@@ -111,19 +102,7 @@ Contributions are welcome!
 4. Push and open a pull request
 
 ---
-
 ## 📄 License
 
 This project is licensed under the **MIT License**. See the [LICENSE](./LICENSE) file.
 
----
-
-## 🙏 Acknowledgments
-
-* [Flask](https://flask.palletsprojects.com/) – Backend framework
-* [Bootstrap](https://getbootstrap.com/) – Frontend styling
-* [Leaflet.js](https://leafletjs.com/) – (If used) for interactive maps
-
----
-
-Let me know if you want a `LICENSE` file, badges, or a demo GIF added to this!
