@@ -1,7 +1,8 @@
-
 # 💊 Tablet Alchemist
 
 A Flask-based web application that recommends tablets based on user-input health conditions. It provides detailed information for each medicine and a clean, interactive UI.
+
+**🔍 Access the live project here:** https://tablet-alchemist-adityajadhav6s-projects.vercel.app/
 
 ---
 
